@@ -16,3 +16,9 @@ public void setup() {
 public void draw() {
   game.update();
 }
+
+void keyPressed() {
+  if (key == ' ') {
+    game.jump();
+  }
+}

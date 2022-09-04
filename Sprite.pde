@@ -1,4 +1,4 @@
-public abstract class Sprite implements Drawable {
+public abstract class Sprite implements IDrawable {
   protected float x;
   protected float y;
   
