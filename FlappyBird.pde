@@ -5,7 +5,7 @@ Arduino arduino;
 Game game;
 
 public void setup() {
-  arduino = new Arduino(this, Arduino.list()[0], 57600);
+  arduino = new Arduino(this, Arduino.list()[1], 57600);
   
   size(500, 500);
   noStroke();
@@ -14,11 +14,9 @@ public void setup() {
 }
 
 public void draw() {
-  game.update();
-}
-
-void keyPressed() {
-  if (key == ' ') {
+  if (arduino.analogRead(1) == 1023 || arduino.analogRead(6) == 1023) {
     game.jump();
   }
+  
+  game.update();
 }
