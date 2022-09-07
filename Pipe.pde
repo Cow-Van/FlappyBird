@@ -31,5 +31,5 @@ public class Pipe extends Sprite implements IBoundingBox {
   @Override
   public float getHeight() {
     return pipeHeight;
-  }
+  }  
 }
